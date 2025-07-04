@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义样式 -->
+  <defs>
+    <style>
+      .text-line {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-anchor: left;
+      }
+    </style>
+
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6C3771;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#2863A9;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#6C3771;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2863A9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 创建一个遮罩区域，只显示一行文字 -->
+  <clipPath id="textClip">
+    <rect x="0" y="0" width="100%" height="100%" />
+  </clipPath>
+
+  <!-- 文字组，包含三行文字 -->
+  <g clip-path="url(#textClip)">
+          <g id="textGroup">
+        <!-- 第一行文字组合（图片+文字） -->
+        <g>
+          <!-- 图片 -->
+          <image x="10" y="20" width="30" height="24" 
+                 href="https://raw.githubusercontent.com/cloudgame-xing/img/refs/heads/main/20250704-153647.gif" />
+          
+          <!-- 文字 -->
+          <text x="50" y="40" class="text-line" fill="url(#textGradient)" text-anchor="start">测试炫彩签名，有意思</text>
+        </g>
+
+      <!-- 第二行文字 -->
+      <text x="10" y="100" class="text-line" fill="#FFFFFF">??????????</text>
+
+      <!-- 第三行文字 -->
+      <text x="10" y="160" class="text-line" fill="#000000">¿¿¿¿¿¿¿¿¿¿</text>
+
+      <!-- 动画：向上滚动，每行停留3秒，滚动1秒 -->
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0; 0,0; 0,-60; 0,-60; 0,-120; 0,-120; 0,0"
+        keyTimes="0; 0.25; 0.33; 0.58; 0.67; 0.92; 1"
+        dur="12s"
+        repeatCount="indefinite" />
+    </g>
+  </g>
+</svg> 
